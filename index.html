@@ -17,7 +17,7 @@
 					<div id="intro">
 						<h1>This is<br />
 						Sushmas portfolio</h1>
-						<p>A data analyst <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons license</a>.</p>
+						<p>A data analyst <a href="https://html5up.net/license">Creative Commons license</a>.</p>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -32,7 +32,7 @@
 					<nav id="nav">
 						<ul class="links">
 							<li class="active"><a href="index.html">These are my projects</a></li>
-							<li><a href="https://www.linkedin.com/in/sushma-s-2a032b165/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://www.linkedin.com/in/sushma-s-2a032b165/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
 							<li><a href="https://github.com/s-suresh" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 								
 							
@@ -40,82 +40,125 @@
 						<ul class="icons">
 							
 						</ul>
+
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
+						<article class="post featured">
+							
+						<style>
+							.button-container {
+							  display: flex;
+							  gap: 10px;
+							  align-items: center;
+							  flex-wrap: wrap;
+							}
+							.load-more {
+							  background-color: #ffffff;
+							  color: white;
+							  border: none;
+							  padding: 10px 15px;
+							  cursor: pointer;
+							  border-radius: 5px;
+							}
+							.load-more:hover {
+							  background-color: #e0e0e0;
+							}
+						  </style>
+						  
+						  <script>
+							function toggleDetails(id) {
+							  var details = document.getElementById(id);
+							  var button = document.getElementById(id + "-btn");
+							  if (details.style.display === "none") {
+								details.style.display = "block";
+								button.innerText = "Show Less";
+							  } else {
+								details.style.display = "none";
+								button.innerText = "Load More";
+							  }
+							}
+						  </script>
+						  
+						  <!-- Project Section -->
+						  
+							<header>
+							  <span class="date">Jan 01, 2025</span>
+							  <h2><a href="#">🏡 Linear Regression Model for House Price Prediction</a></h2>
+							</header>
+							<a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
+							<p>This project uses a Linear Regression model to predict house prices based on median income. By analyzing housing-related data, it establishes a relationship between income levels and property prices, helping users estimate housing costs.</p>
+						  
+							<div class="button-container">
+							  <button id="details1-btn" class="load-more" onclick="toggleDetails('details1')">Load More</button>
+							  <a href="https://s-suresh-linear-regression-app-7roxp8.streamlit.app/" class="button">Live Demo</a>
+							  <a href="https://github.com/s-suresh/Linear_regression" class="button">GitHub Repository</a>
+							</div>
+						  
+							<div id="details1" style="display: none; margin-top: 15px;">
+							  <p><strong>🔹 Key Features:</strong><br>
+								✅ Data-Driven Predictions using real housing data.<br>
+								✅ Interactive Web App with Streamlit.<br>
+								✅ Visualization & Web Deployment.</p>
+							  <p><strong>🔹 Technologies:</strong> Python, scikit-learn, Streamlit, pandas, numpy.<br />
+							    <strong>🔹 How It Works:</strong>
+								User Input: Users enter their median income.<br />
+								Model Prediction: The trained model predicts the house price.<br />
+								Visualization: A line chart shows price variations.<br />
+								Results: The predicted price is displayed.</p>
+							</div>
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<span class="date">Jan 01, 2025</span>
-									<h2><a href="#">🏡 Linear Regression Model for House Price Prediction<br />
-									</a></h2>
-								</header>
-								<a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
-								<P style="text-align: center;">This project uses a Linear Regression model to predict house prices based on median income. By analyzing housing-related data, it establishes a relationship between income levels and property prices, helping users estimate housing costs.<br />
-									<strong>🔹Key Features:</strong><br />
-									✅ Data-Driven Predictions: Uses real housing data to make price estimates.<br />
-									✅ Interactive Web App: Built with Streamlit for real-time predictions.<br />
-									✅ Line Chart Visualization: Displays how house prices change with different incomes.<br />
-									✅ Web Deployment: Accessible via GitHub Pages / Streamlit Cloud.<br />
-									<strong>🔹 Technologies Used:</strong><br />
-									Programming Language: Python<br />
-									Machine Learning: Linear Regression (via scikit-learn)<br />
-									Libraries: pandas, numpy, streamlit, matplotlib<br />
-									Deployment: GitHub + Streamlit Cloud<br />
-									<strong>🔹 How It Works:</strong><br />
-									User Input: Users enter their median income.<br />
-									Model Prediction: The trained model predicts the house price.<br />
-									Visualization: A line chart shows price variations.<br />
-									Results: The predicted price is displayed.</p>
-								<ul class="actions special">
-									<li><a href="https://s-suresh-linear-regression-app-7roxp8.streamlit.app/" class="button large"><strong>Live Demo</strong></a></li>
-									 <li><a href="https://github.com/s-suresh/Linear_regression" class="button large"><strong>GitHub Repository</strong></a></li>
-							</ul>
-							</article>
-
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date">Jan 19, 2025</span>
-										<h2><a href="#">Body Measurement<br />
-										</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-									<p>This interactive Streamlit web app allows users to enter their body measurements and calculates their BMI (Body Mass Index). The app provides dynamic visualizations by resizing a silhouette image based on the user's BMI, giving a clear representation of body proportions.
-                                        <br />
-										🛠️ Features:<br />
-										✅ User-friendly number inputs for height, weight, and body circumferences<br />
-										✅ BMI Calculation with real-time feedback on health status<br />
-										✅ Dynamic Image Resizing based on BMI for better visualization<br />
-										✅ Health Tips based on BMI category (Underweight, Normal, Overweight, Obese)
-									
-										<br />
-										
-										
-										🚀 Use Case:<br />
-										This tool is ideal for individuals tracking their fitness journey, nutritionists, or health professionals who need a quick and easy way to assess body measurements and BMI.</p>
-									<ul class="actions special">
-										<li><a href="https://untitledpy-slhcnifjaxzmptjqsqihzs.streamlit.app/" class="button">👀 Live Demo</a></li>
-										<li><a href="https://github.com/s-suresh/body_classifier/tree/main" class="button"><strong>GitHub Repository</strong></a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Feb 22, 2025</span>
-										<h2><a href="#"><br />
-										</a>digit classifier</h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/nnetwok.gif" alt="Neural network animation for digit classification" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-										<li><a href="https://untitledpy-slhcnifjaxzmptjqsqihzs.streamlit.app/" class="button">👀 Live Demo</a></li>
-										<li><a href="https://github.com/s-suresh/digit-classifier/tree/main" class="button"><strong>GitHub Repository</strong></a></li>
-									</ul>
-								</article>
+						  </article>
+						  <!-- Posts -->
+<section class="posts">
+    <article>
+        <header>
+            <span class="date">Jan 19, 2025</span>
+            <h2><a href="#">Body Measurement<br /></a></h2>
+        </header>
+        <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+        <p>This interactive Streamlit web app allows users to enter their body measurements and calculates their BMI (Body Mass Index). The app provides dynamic visualizations by resizing a silhouette image based on the user's BMI, giving a clear representation of body proportions.</p>
+        <div class="button-container">
+            <button id="details2-btn" class="load-more" onclick="toggleDetails('details2')">Load More</button>
+            <a href="https://untitledpy-slhcnifjaxzmptjqsqihzs.streamlit.app/" class="button">👀 Live Demo</a>
+            <a href="https://github.com/s-suresh/body_classifier/tree/main" class="button"><strong>GitHub Repository</strong></a>
+        </div>
+        <div id="details2" style="display: none; margin-top: 15px;">
+            <p><strong>🔹 Key Features:</strong><br>
+                ✅ User-friendly number inputs for height, weight, and body circumferences.<br>
+                ✅ BMI Calculation with real-time feedback on health status.<br>
+                ✅ Dynamic Image Resizing based on BMI for better visualization.<br>
+                ✅ Health Tips based on BMI category (Underweight, Normal, Overweight, Obese).</p>
+            <p><strong>🔹 Technologies:</strong> Python, Streamlit, pandas, numpy.<br />
+                <strong>🔹 How It Works:</strong>
+                Users input their body measurements, and the app calculates BMI and provides visual feedback.</p>
+        </div>
+    </article>
+    <article>
+        <header>
+            <span class="date">Feb 22, 2025</span>
+            <h2><a href="#">Digit Classifier</a></h2>
+        </header>
+        <a href="#" class="image fit"><img src="images/nnetwok.gif" alt="Neural network animation for digit classification" /></a>
+        <p>This project uses a neural network to classify handwritten digits. It demonstrates the power of deep learning in image recognition tasks.</p>
+        <div class="button-container">
+            <button id="details3-btn" class="load-more" onclick="toggleDetails('details3')">Load More</button>
+            <a href="https://untitledpy-slhcnifjaxzmptjqsqihzs.streamlit.app/" class="button">👀 Live Demo</a>
+            <a href="https://github.com/s-suresh/digit-classifier/tree/main" class="button"><strong>GitHub Repository</strong></a>
+        </div>
+        <div id="details3" style="display: none; margin-top: 15px;">
+            <p><strong>🔹 Key Features:</strong><br>
+                ✅ Neural network-based digit classification.<br>
+                ✅ Interactive visualization of predictions.<br>
+                ✅ Real-time feedback on model accuracy.</p>
+            <p><strong>🔹 Technologies:</strong> Python, TensorFlow, Keras, Streamlit.<br />
+                <strong>🔹 How It Works:</strong>
+                Users draw a digit, and the model predicts the number with high accuracy.</p>
+        </div>
+    </article>
+</section>
+						  
 								<article>
 									<header>
 										<span class="date">April 18, 2017</span>
